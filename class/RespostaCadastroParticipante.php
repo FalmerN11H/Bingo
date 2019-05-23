@@ -35,14 +35,14 @@ if($tam = 1){
 	$cadastrar->setEmail($_POST["email"]);
 	$cadastrardao->insert($cadastrar);
 	$mix->setRa($ra);
-	$mix->setGrupo($grupodao->pegarid($grupo));
+	$mix->setGrupo($part);
 }elseif($tam>1){
 	$cadastrar->setRa($_POST["ra"]);
 	$cadastrar->setNome($_POST["nome"]);
 	$cadastrar->setEmail($_POST["email"]);
 	$cadastrardao->insert($cadastrar);
 	$mix->setRa($ra);
-	$mix->setGrupo($grupodao->pegarid($grupo));
+	$mix->setGrupo($part);
 	for ($i=2; $i <= $tam; $i++) { 
 		$ra = $ra.$i;
 		$nome = $nome.$i;
@@ -52,7 +52,7 @@ if($tam = 1){
 		$cadastrar->setEmail($email);
 		$cadastrardao->insert($cadastrar);
 		$mix->setRa($ra);
-		$mix->setGrupo($grupodao->pegarid($grupo));
+		$mix->setGrupo($part);
 		$ra = "ra";
 		$nome = "nome";
 		$email = "email";

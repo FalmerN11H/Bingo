@@ -13,7 +13,9 @@ $user->setSenha($senha);
 
 $result = $userdao->autenticar($user);
 
-if(count($results)>0){
+var_dump($result);
+
+if(count($result)>0){
 	header("Refresh:0;url=../telainicial_professor.html");
 }else{
 	echo("<h1>Login e/ou senha inválidos</h1>");
