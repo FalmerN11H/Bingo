@@ -7,6 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="estilos.css">
+       
     </head>
     <body>
 		<div>
@@ -18,26 +19,27 @@
 							<h2> Cadastro </h2>
 							<hr>
 							<div class="input-group">
-								<input class="form-control" id="login" name="login" placeholder="Login" type="text" value>
+                                                            <input class="form-control" id="login" name="login" placeholder="Login" type="text" required pattern=".{6,50}" title="Minimo 6 e Maximo 50 caracteres">
 							</div>	
 							<br>
 							<div class="input-group">
-								<input class="form-control" id="senha" name="senha" placeholder="Senha" type="password">
+								<input class="form-control" id="senha" name="senha" placeholder="Senha" type="password" required pattern=".{6,50}" title="Minimo 6 e Maximo 50 caracteres">                            
 							</div>
 							<br>
 							<div class="input-group">
-								<input class="form-control" id="confsenha" name="confsenha" placeholder="Confirmar senha" type="password">
+								<input class="form-control" id="confsenha" name="confsenha" placeholder="Confirmar senha" type="password" required>
 							</div>
 							<br>
 							<div class="input-group">
-								<input class="form-control" id="mail" name="mail" placeholder="E-mail" type="email">
+								<input class="form-control" id="mail" name="mail" placeholder="E-mail" type="email" required pattern=".{6,50}" title="Minimo 6 e Maximo 50 caracteres">
 							</div>
+                                                        
 							<br>
 							<div class="input-group">
-								<input class="form-control" id="nome" name="nome" placeholder="Nome completo" type="text">
+                                                            <input class="form-control" id="nome" name="nome" placeholder="Nome completo" type="text" required="" pattern=".{3,50}" title="Minimo 3 e Maximo 50 caracteres">
 							</div>
 							<br>
-							<input class="btn btn-info btn-success btn-block" type="submit" value="Cadastrar">
+							<input class="btn btn-info btn-success btn-block" id="submit" name="submit" type="submit" value="Cadastrar">
 						</fieldset>
 					</form>						
 				</div>

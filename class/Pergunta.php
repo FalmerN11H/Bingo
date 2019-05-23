@@ -3,11 +3,11 @@
 class Pergunta{
 	private $id;
 	private $pergunta;
-	private $altenativa1;
-	private $altenativa2;
-	private $altenativa3;
-	private $altenativa4;
-	private $altenativa5;
+	private $alternativa1;
+	private $alternativa2;
+	private $alternativa3;
+	private $alternativa4;
+	private $alternativa5;
 	private $resposta;
 	private $categoria;
 
@@ -68,10 +68,10 @@ class Pergunta{
 	}
 
 	public function setResposta($value){
-		$this->resposta = $value
+		$this->resposta = $value;
 	}
 
-	public function getResposta($value){
+	public function getResposta(){
 		return $this->resposta;
 	}
 

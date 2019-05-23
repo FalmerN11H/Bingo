@@ -18,7 +18,7 @@ class PerguntaDao{
 	}
 
 	public function insert($obj){
-		$this->sql->query("INSERT INTO pergunta(pergunta,alternativa1,alternativa2,alternativa3,alternativa4,alternativa5,resposta,categoria) VALUES (:pergunta,:altertiva1,:altertiva2,:alternativa3,:alternativa4,:alternativa5,:resposta,:categoria)",array(":pergunta"=>$obj->getPergunta(),":alternativa1"=>$obj->getAlternativa1(),":alternativa2"=>$obj->getAlternativa2(),":alternativa3"=>$obj->getAlternativa3(),":alternativa4"=>$obj->getAlternativa4(),":alternativa5"=>getAlternativa5(),":resposta"=>getResposta(),":categoria"=>getCategoria()));
+		$this->sql->query("INSERT INTO pergunta(pergunta,a1,a2,a3,a4,a5,resposta,categoria) VALUES (:pergunta,:a1,:a2,:a3,:a4,:a5,:resposta,:categoria)",array(":pergunta"=>$obj->getPergunta(),":a1"=>$obj->getAlternativa1(),":a2"=>$obj->getAlternativa2(),":a3"=>$obj->getAlternativa3(),":a4"=>$obj->getAlternativa4(),":a5"=>$obj->getAlternativa5(),":resposta"=>$obj->getResposta(),":categoria"=>$obj->getCategoria()));
 	}
 
 
@@ -27,7 +27,7 @@ class PerguntaDao{
 	}
 
 	public function update($obj){
-		$this->sql->query("UPDATE pergunta SET pergunta = :pergunta, alternativa1 = :alternativa1, alternativa2 = :alternativa2, alternativa3 = :alternativa3, alternativa4 = :alternativa4, alternativa5 = :alternativa5, resposta = :resposta, categoria = :categoria WHERE id = :id",array(":pergunta"=>$obj->getPergunta(),":alternativa1"=>$obj->getAlternativa1(),":alternativa2"=>$obj->getAlternativa2(),":alternativa3"=>getAlternativa3(),":alternativa4"=>getAlternativa4(),":alternativa5"=>getAlternativa5(),":resposta"=>getResposta(),":categoria"=>getCategoria()));
+		$this->sql->query("UPDATE pergunta SET pergunta = :pergunta, a1 = :a1, a2 = :a2, a3 = :a3, a4 = :a4, a5 = :a5, resposta = :resposta, categoria = :categoria WHERE id = :id",array(":pergunta"=>$obj->getPergunta(),":a1"=>$obj->getAlternativa1(),":a2"=>$obj->getAlternativa2(),":a3"=>getAlternativa3(),":a4"=>getAlternativa4(),":a5"=>getAlternativa5(),":resposta"=>getResposta(),":categoria"=>getCategoria()));
 	}
 
 	public static function search($obj){
