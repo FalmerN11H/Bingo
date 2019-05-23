@@ -3,7 +3,8 @@ CREATE TABLE usuario(
     login VARCHAR(50),
     senha VARCHAR(50),
     email VARCHAR(50),
-    nome VARCHAR(50)
+    nome VARCHAR(50),
+    UNIQUE (login)
 )
 
 CREATE TABLE categoria(

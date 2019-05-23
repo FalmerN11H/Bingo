@@ -17,6 +17,10 @@ class UsuarioDao{
 		return $this->sql->select("SELECT * FROM usuario ORDER BY id");
 	}
 
+	public function listar($obj){
+		return $this->sql->select("SELECT id FROM usuario WHERE login = :login AND senha = :senha",array(":login"=>$obj->getLogin(),":senha"=>$obj->getSenha()));
+	}
+
 	public function insert($obj){
 		$this->sql->query("INSERT INTO usuario(login,senha,email,nome) VALUES (:login,:senha,:email,:nome)",array(":login"=>$obj->getLogin(),":senha"=>$obj->getSenha(),":email"=>$obj->getEmail(),":nome"=>$obj->getNome()));
 	}
@@ -27,7 +31,7 @@ class UsuarioDao{
 	}
 
 	public function update($obj){
-		$this->sql->query("UPDATE usuario SET login = :login, senha = :senha, nome = :nome WHERE id = :id",array(":login"=>$obj->getLogin(),":senha"=>$obj->getSenha(),":id"=>$obj->getId(),":nome"=>$obj->getNome()));
+		$this->sql->query("UPDATE usuario SET login = :login, senha = :senha, email = :email, nome = :nome WHERE id = :id",array(":login"=>$obj->getLogin(),":senha"=>$obj->getSenha(),":email"=>$obj->getEmail(),":nome"=>$obj->getNome(),":id"=>$obj->getId()));
 	}
 
 	public function search($obj){
