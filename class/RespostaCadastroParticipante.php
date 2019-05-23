@@ -31,15 +31,15 @@ $tam = (int)$tam;
 
 if($tam = 1){
 	$cadastrar->setRa($_POST["ra"]);
-	$cadastrar->setRa($_POST["nome"]);
-	$cadastrar->setRa($_POST["email"]);
+	$cadastrar->setNome($_POST["nome"]);
+	$cadastrar->setEmail($_POST["email"]);
 	$cadastrardao->insert($cadastrar);
 	$mix->setRa($ra);
 	$mix->setGrupo($grupodao->pegarid($grupo));
 }elseif($tam>1){
 	$cadastrar->setRa($_POST["ra"]);
-	$cadastrar->setRa($_POST["nome"]);
-	$cadastrar->setRa($_POST["email"]);
+	$cadastrar->setNome($_POST["nome"]);
+	$cadastrar->setEmail($_POST["email"]);
 	$cadastrardao->insert($cadastrar);
 	$mix->setRa($ra);
 	$mix->setGrupo($grupodao->pegarid($grupo));
