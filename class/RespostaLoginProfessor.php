@@ -13,7 +13,6 @@ $user->setSenha($senha);
 
 $result = $userdao->autenticar($user);
 
-var_dump($result);
 
 if(count($result)>0){
 	header("Refresh:0;url=../telainicial_professor.html");
