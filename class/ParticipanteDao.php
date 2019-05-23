@@ -18,7 +18,7 @@ class ParticipanteDao{
 	}
 
 	public function insert($obj){
-		$this->sql->query("INSERT INTO participante(ra,nome,email) VALUES (:ra,:nome,:email)",array(":ra"=>$obj->getRa(),":nome"=>$obj->getNome(),":email"=>$obj->getEmaiil()));
+		$this->sql->query("INSERT INTO participante(ra,nome,email) VALUES (:ra,:nome,:email)",array(":ra"=>$obj->getRa(),":nome"=>$obj->getNome(),":email"=>$obj->getEmail()));
 	}
 
 

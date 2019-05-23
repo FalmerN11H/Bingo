@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Cadastro Pergunta</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="estilos.css">
+    </head>
+    <body>
+        
+        
+		<div>
+			<div class="row">
+				<div class="col-sm-4"></div>
+				<div class="col-sm-4 borda">			
+					<form action="telainicial_professor.html">
+						<fieldset class="text-center mb-4">
+							<h2> Cadastro Pergunta </h2>
+							<hr>
+							<div class="input-group">
+								<input class="form-control" id="pergunta" name="pergunta" placeholder="Pergunta" type="text" value>
+							</div>	
+							<br>
+							<div class="input-group">
+								<input class="form-control" id="alternativa1" name="1" placeholder="Alternativa 1" type="text">
+							</div>
+							<br>
+							<div class="input-group">
+								<input class="form-control" id="alternativa2" name="2" placeholder="Alternativa 2" type="text">
+							</div>
+							<br>
+                                                        <div class="input-group">
+								<input class="form-control" id="alternativa3" name="3" placeholder="Alternativa 3" type="text">
+							</div>
+							<br>
+                                                        <div class="input-group">
+								<input class="form-control" id="alternativa4" name="4" placeholder="Alternativa 4" type="text">
+							</div>
+							<br>
+                                                        <div class="input-group">
+								<input class="form-control" id="alternativa5" name="5" placeholder="Alternativa 5" type="text">
+							</div>
+							<br>
+                                                        <div class="input-group">
+                                                            <label>Selecione a resposta Correta:</label>
+                                                            
+                                                            <select required="" name="alternativaCorreta" id="alternativaCorreta">  
+                                                                <option></option>
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                            </select>
+                                                        </div>
+                                                        
+							
+                                                        
+                                                        
+							<br>
+							<input class="btn btn-info btn-success btn-block" type="submit" value="Cadastrar">
+						</fieldset>
+					</form>						
+				</div>
+				<div class="col-sm-4"></div>
+			</div>	
+		</div>
+    </body>
+</html>

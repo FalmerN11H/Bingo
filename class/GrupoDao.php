@@ -30,8 +30,12 @@ class GrupoDao{
 		$this->sql->query("UPDATE grupo SET nome = :nome, partida = :partida WHERE id = :id",array(":nome"=>getNome(),":partida"=>getPartida(),":id"=>$obj->getId()));
 	}
 
-	public static function search($obj){
+	public function search($obj){
 		return $this->sql->select("SELECT * FROM grupo WHERE partida LIKE :partida ORDER BY id",array(":partida"=>"%".$obj->getPartida()."%"));
+	}
+
+	public function pegarid($obj){
+		return $this->sql->select("SELECT id FROM grupo WHERE nome = :nome ORDER BY id",array(":nome"=>$obj->getNome()));
 	}
 
 }

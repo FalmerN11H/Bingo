@@ -3,7 +3,7 @@
 require_once "config.php";
 
 class PartidaDao{
-	private sql;
+	private $sql;
 
 	public function __construct(){
 		$this->sql = new Sql();
