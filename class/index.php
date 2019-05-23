@@ -1,7 +1,7 @@
 <?php
 
 require_once "config.php";
-
+/*
 $user = new UsuarioDao();
 $usuario = new Usuario();
 $usuario->setLogin("mario");
@@ -10,6 +10,7 @@ $usuario->setEmail("luigi@ekko.com");
 $user->insert($usuario);
 $result = $user->list();
 echo json_encode($result);
-
+*/
+var_dump($_POST);
 
 ?>
