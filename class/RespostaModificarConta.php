@@ -16,11 +16,11 @@ $altera->setMail($mail);
 $altera->setNome($nome);//Implementar funcoes para nome
 
 $alteradao = new UsuarioDao();
-$alteradao->insert($altera);
-if(count($results)>0){
+$result = $alteradao->update($altera);
+if(count($result)>0){
 	header("Refresh:0;url=../telainicial_professor.html");
 }else{
-	echo("Login e/ou senha inválidos");
+	echo("<h1>Erro ao alterar dados<h1>");
 	header("Refresh:5;url=../cadastro.html");
 }
 

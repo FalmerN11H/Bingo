@@ -6,3 +6,63 @@ CREATE TABLE usuario(
     nome VARCHAR(50)
 )
 
+CREATE TABLE categoria(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(30)
+)
+
+CREATE TABLE pergunta(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    pergunta VARCHAR(200),
+    a1 VARCHAR(200),
+    a2 VARCHAR(200),
+    a3 VARCHAR(200),
+    a4 VARCHAR(200),
+    a5 VARCHAR(200),
+    resposta INT,
+    categoria INT,
+    FOREIGN KEY (categoria) REFERENCES categoria(id)
+)
+
+CREATE TABLE partida(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    criador INT,
+    nome VARCHAR(50),
+    rodada INT,
+    acerto INT,
+    erro INT,
+    FOREIGN KEY (criador) REFERENCES usuario(id)
+)
+
+CREATE TABLE grupo(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(30),
+    partida INT,
+    FOREIGN KEY (partida) REFERENCES partida(id)
+)
+
+CREATE TABLE participante(
+    ra INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(50),
+    email VARCHAR(50)
+)
+
+CREATE TABLE rodada(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    grupo INT,
+    partida INT,
+    pergunta INT,
+    respondido INT,
+    numero INT,
+    FOREIGN KEY (grupo) REFERENCES grupo(id),
+    FOREIGN KEY (partida) REFERENCES partida(id),
+    FOREIGN KEY (pergunta) REFERENCES pergunta(id)
+)
+
+CREATE TABLE grupoparticipante(
+    id INT,
+    ra INT UNSIGNED,
+    FOREIGN KEY (id) REFERENCES grupo(id),
+    FOREIGN KEY (ra) REFERENCES participante(ra)
+)
+
