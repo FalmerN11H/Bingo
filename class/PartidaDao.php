@@ -14,7 +14,11 @@ class PartidaDao{
 	}
 
 	public function list(){
-		return $this->sql->select("SELECT * FROM partida ORDER BY partida");
+		return $this->sql->select("SELECT * FROM partida ORDER BY id");
+	}
+
+	public function topper(){
+		return $this->sql->select("SELECT id FROM usuario ORDER BY id DESC LIMIT 1");
 	}
 
 	public function insert($obj){

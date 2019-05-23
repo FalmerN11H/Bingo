@@ -9,14 +9,14 @@ $login = $_POST["login"];
 $senha = $_POST["senha"];
 
 $user->setLogin($login);
-$senha->setSenha($senha);
+$user->setSenha($senha);
 
 $result = $userdao->autenticar($user);
 
 if(count($results)>0){
 	header("Refresh:0;url=../telainicial_professor.html");
 }else{
-	echo("Login e/ou senha inválidos");
+	echo("<h1>Login e/ou senha inválidos</h1>");
 	header("Refresh:5;url=../login_professor.html");
 }
 
