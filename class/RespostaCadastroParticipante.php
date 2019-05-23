@@ -14,13 +14,20 @@ $mixdao = new GrupoParticipanteDao();
 
 $gruponome = $_POST["apelido1"];
 $partidaid = $partida->topper();
+$part;
 $grupo->setNome($gruponome);
-$grupo->setPartida($partidaid);
+foreach ($partidaid as $key) {
+	foreach ($key as $value) {
+		$part = $value;
+	}
+}
+$grupo->setPartida($part);
 $grupodao->insert($grupo);
 $ra = "ra";
 $nome = "nome";
 $email = "email";
-$tam = (int)count($_POST)/3;
+$tam = floor(count($_POST)/3);
+$tam = (int)$tam;
 
 if($tam = 1){
 	$cadastrar->setRa($_POST["ra"]);
@@ -52,6 +59,7 @@ if($tam = 1){
 	}
 }
 
+header("Refresh:0;url=../tela_jogo.html");
 
 
 
