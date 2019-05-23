@@ -18,8 +18,11 @@ function pagina(opcao){
 		case 'gerenciarUsuario':
 			location.href = "modificar_conta.html";
 			break;
+        case 'criarPergunta':
+			location.href = "cadastro_pergunta.html";
+			break;
 		default:
-			alert("Página não encontrada!");
+			alert("Pï¿½gina nï¿½o encontrada!");
 			break;
 	}
 };

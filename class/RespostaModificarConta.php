@@ -12,7 +12,7 @@ $nome = $_POST["nome"];
 
 $altera->setLogin($login);
 $altera->setSenha($senha);
-$altera->setMail($mail);
+$altera->setEmail($mail);
 $altera->setNome($nome);//Implementar funcoes para nome
 
 $alteradao = new UsuarioDao();
