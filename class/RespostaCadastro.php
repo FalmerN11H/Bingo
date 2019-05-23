@@ -12,13 +12,13 @@ $nome = $_POST["nome"];
 
 $user->setLogin($login);
 $user->setSenha($senha);
-$user->setMail($mail);
+$user->setEmail($mail);
 $user->setNome($nome);//Implementar funcoes para nome
 
 $userdao = new UsuarioDao();
 $userdao->insert($user);
-$userdao->autentica($user);
-if(count($results)>0){
+$result = $userdao->autenticar($user);
+if(count($result)>0){
 	header("Refresh:0;url=../telainicial_professor.html");
 }else{
 	echo("Login e/ou senha inválidos");

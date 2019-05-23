@@ -30,11 +30,11 @@ class UsuarioDao{
 		$this->sql->query("UPDATE usuario SET login = :login, senha = :senha, nome = :nome WHERE id = :id",array(":login"=>$obj->getLogin(),":senha"=>$obj->getSenha(),":id"=>$obj->getId(),":nome"=>$obj->getNome()));
 	}
 
-	public static function search($obj){
+	public function search($obj){
 		return $this->sql->select("SELECT * FROM usuario WHERE nome LIKE :nome ORDER BY id",array(":nome"=>"%".$obj->getNome()."%"));
 	}
 
-	public static function autenticar($obj){
+	public function autenticar($obj){
 		return $this->sql->select("SELECT login,senha FROM usuario WHERE login = :login AND senha = :senha",array(":login"=>$obj->getLogin(),":senha"=>$obj->getSenha()));
 	}
 
