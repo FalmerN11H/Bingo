@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Tela inicial do professor</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="funcoes.js" type="text/javascript"></script>
+		<link rel="stylesheet" href="estilos.css">
+    </head>
+    <body>
+		<div class= "jumbotron jumbotron-billboard"> 
+			<div class="row">
+				<div class="col-sm-10">
+					<img src="bingo.png" alt="bingo" class="imgindex">
+				</div>
+				<div class="col-sm-2">
+					<label> Professor, ... </Label>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-sm-4"> 
+				<button class="btn btn-info btn-success btn-block" onclick="pagina('criarSala')">Criar sala</button>
+			</div>
+			<div class="col-sm-4"> 
+				<button class="btn btn-info btn-success btn-block" onclick="pagina('entrarJogo')">Entrar no jogo</button>
+			</div>	
+			<div class="col-sm-4"> 
+				<button class="btn btn-info btn-success btn-block mb-4" onclick="pagina('gerenciarUsuario')">Gerenciar usuário</button>
+				<br>
+				<br>
+				<button class="btn btn-info btn-success btn-block mt-4" onclick="pagina('professor')">Logoff</button>
+			</div>
+			
+		</div>
+    </body>
+</html>

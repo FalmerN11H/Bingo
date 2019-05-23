@@ -3,6 +3,10 @@
 class Partida{
 	private $partida;
 	private $criador;
+	private $nome;
+	private $maximogrupo;
+	private $maximoparticipante;
+	private $tema
 	private $rodadas;
 	private $acertos;
 	private $erros;
@@ -21,6 +25,38 @@ class Partida{
 
 	public function getCriador(){
 		return $this->criador;
+	}
+
+	public function setNome($value){
+		$this->nome = $value;
+	}
+
+	public function getNome(){
+		return $this->nome;
+	}
+
+	public function setMaximoGrupo($value){
+		$this->maximogrupo = $value;
+	}
+
+	public function getMaximoGrupo(){
+		return $this->maximogrupo;
+	}
+
+	public function setMaximoParticipante($value){
+		$this->maximoparticipante = $value;
+	}
+
+	public function getMaximoGrupo(){
+		return $this->maximoparticipante;
+	}
+
+	public function setTema($value){
+		$this->tema = $value;
+	}
+
+	public function getTema(){
+		return $this->tema;
 	}
 
 	public function setRodadas($value){

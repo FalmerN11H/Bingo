@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Criar sala</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="estilos.css">
+    </head>
+    <body>
+		<div class="row">
+			<div class="col-sm-4"></div>
+			<div class="col-sm-4 borda">			
+				<form action="acompanhar_jogo.html">
+					<fieldset class="text-center">
+						<h2> Criar sala </h2>
+						<hr>
+						<div class="input-group">
+							<input class="form-control" id="nomesala" name="nomesala" placeholder="Nome da sala" type="text" value>
+						</div>	
+						<br>
+						<div class="input-group">
+							<input class="form-control mr-1" id="part" name="part" placeholder="Máximo de participantes" type="number">
+							<input class="form-control" id="qtde" name="qtde" placeholder="participantes por grupo" type="number">
+							<br>
+							<br>
+						</div>
+								
+						<div class="input-group">
+							<br>
+							<br>
+							<label class="mr-1"> <h4>Tema:</h4> </label>
+							<br>
+							<select class="form-control" name="Tema">
+								<option ID="nulo"> </option>
+								<option ID="Prog_web">Programação para WEB </option>
+								<option ID="algoritimos">Analise de algoritimos </option>
+								<option ID="Prog_java">Java </option>
+								<option ID="Prog_JS">JavaScript </option>
+								<option ID="c_cc">C/C++ </option>
+								<option ID="arquitetura">Arquitetura de computadores </option>
+								<option ID="poo">Programação orientada a objetos </option>
+								<option ID="micro">Micro controladores </option>
+								<option ID="arduino">Arduino </option>
+								<option ID="redes">Redes de computadores </option>
+							</select>
+							<br>
+							<br>
+						</div>
+								
+						<br>
+						<input class="btn btn-info btn-success btn-block" type="submit"value="Criar sala">
+					</fieldset>
+				</form>						
+			</div>
+			<div class="col-sm-4"></div>
+		</div>	
+    </body>
+</html>

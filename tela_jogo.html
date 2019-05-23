@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Tela do jogo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="estilos.css">
+        <script src="funcoes.js" type="text/javascript"></script>
+    </head>
+    <body class="fundobola">
+		<div class= "jumbotron jumbotron-padding text-center"> 
+			<img src="bolas.jpg" alt="bingo" class="imgbolas">
+		</div>
+		<hr>
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="input-group">
+					<img src="folha.jpg" alt="bingo" class="imgindex imgfolha">
+					<input class="inputnumber" id="numbingo" name="numbingo" placeholder="Numero da cartela" type="number">
+				</div>
+			
+				<div id="tabela" class="input-group ml-4">
+				<br>
+			
+					<table class="text-center" >
+						<tr>
+							<td><label class="rounded-circle numbingo">14</label></td>
+							<td><label class="rounded-circle numbingo">58</label></td>
+							<td><label class="rounded-circle numbingo">7</label></td>
+							<td><label class="rounded-circle numbingo">35</label></td>
+							<td><label class="rounded-circle numbingo">67</label></td>
+						</tr>   
+								
+						<tr>
+							<td><label class="rounded-circle numbingo">89</label></td>
+							<td><label class="rounded-circle numbingo">51</label></td>
+							<td><label class="rounded-circle numbingo">93</label></td>
+							<td><label class="rounded-circle numbingo">5</label></td>
+							<td><label class="rounded-circle numbingo">64</label></td>
+						</tr>  
+						<tr>
+							<td><label class="rounded-circle numbingo">25</label></td>
+							<td><label class="rounded-circle numbingo">21</label></td>
+							<td><label class="rounded-circle numbingo">34</label></td>
+							<td><label class="rounded-circle numbingo">50</label></td>
+							<td><label class="rounded-circle numbingo">72</label></td>
+						</tr>    
+						<tr>
+							<td><label class="rounded-circle numbingo">60</label></td>
+							<td><label class="rounded-circle numbingo">95</label></td>
+							<td><label class="rounded-circle numbingo">56</label></td>
+							<td><label class="rounded-circle numbingo">49</label></td>
+							<td><label class="rounded-circle numbingo">7</label></td>
+						</tr>  
+						<tr>
+							<td><label class="rounded-circle numbingo">26</label></td>
+							<td><label class="rounded-circle numbingo">63</label></td>
+							<td><label class="rounded-circle numbingo">73</label></td>
+							<td><label class="rounded-circle numbingo">11</label></td>
+							<td><label class="rounded-circle numbingo">42</label></td>
+						</tr>   
+					</table>
+					<br>
+					
+				</div>
+					
+			</div>
+		
+			<div class="col-sm-6">
+				<form>
+				<p><label for="questao" class="text-center"> <b><h4>Questão 1</h4>
+				<br> É um programa utilizado para acessar o provedor do serviço 
+				de correio eletrônico e ler as mensagens recebidas. Qual alternativa apresenta CORRETAMENTE o 
+				programa de computador citado?
+				</label></p>
+				
+				<p><input type="radio" name="alter" value="1" id="altA"> <label for="altA"> Internet Explorer </label></p>
+				<p><input type="radio" name="alter" value="2" id="altB"> <label for="altB"> Windows Update </label></p>
+				<p><input type="radio" name="alter" value="3" id="altC"> <label for="altC"> Microsoft FrontPage </label></p>
+				<p><input type="radio" name="alter" value="4" id="altD"> <label for="altD"> Microsoft Excel </label></p>
+				<p><input type="radio" name="alter" value="5" id="altE"> <label for="altE"> Windows Media Player </label></p></b> 
+				<button class="btn btn-info" type="submit"><h1>Responder</h1></button>
+				</form>
+			</div>
+		</div>
+		<button onclick="esconder()" class="ml-4 mt-1">Esconder</button>
+		
+    </body>
+</html>

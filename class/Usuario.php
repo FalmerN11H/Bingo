@@ -5,6 +5,7 @@ class Usuario{
 	private $login;
 	private $senha;
 	private $email;
+	private $nome;
 
 	public function setId($value){
 		$this->id = $value;
@@ -36,6 +37,14 @@ class Usuario{
 
 	public function getEmail(){
 		return $this->email;
+	}
+
+	public function setNome($value){
+		$this->nome = $value;
+	}
+
+	public function getNome(){
+		return $this->nome;
 	}
 }
 ?>

@@ -1,0 +1,92 @@
+.imgindex{
+	width:140px; 
+	height: 140px;
+}
+.imgbolas{
+	width: 20%;
+	height: 20%;
+}
+.imgfolha{
+	width: 10%; 
+	height: 10%; 
+	margin-right: 5px; 
+	margin-left: 115px;
+}
+.centerbutton{
+	margin-top: auto;
+}
+footer{
+		position: fixed;
+		width: 100%;
+		text-align: center;
+		bottom: 0;
+}
+.borda{
+	margin-top: 150px;
+	padding: 30px 30px 30px 30px;
+	background-color: #E6E6E6;
+}
+.borda2{
+	margin-top: 50px;
+	padding: 30px 30px 30px 30px;
+	background-color: #E6E6E6;
+}
+.borda3{
+	margin-top: 10px;
+	padding: 60px;
+	background-color: #58FAF4;
+}
+.borda4{
+	margin-top: 10px;
+	padding: 60px;
+	background-color: #F4FA58;
+}
+.borda5{
+	margin-top: 10px;
+	padding: 60px 70px 60px 60px;
+	background-color: #FE2E2E;
+}
+td{
+	padding: 10px 20px 20px 20px;
+}
+table{
+	background-color: #819FF7;
+	width: 30%; 
+	border-radius: 10px; 
+	margin-top: 10px; 
+}
+.numbingo{
+	background-color: #FFFFFF; 
+	width: 40px; 
+	height: 40px;
+}
+.fundobola{
+	background-image: url("fundo.jpg");
+}
+.jumbotron-billboard{
+	background-color: #CEF6F5;
+	opacity: 2.1;
+}
+.texto_explicativo{
+	margin-left: 30px;
+}
+.botaousuario{
+	width:20%;
+	display:block; 
+	margin: 0 auto;
+}
+.lblusuario{
+	margin-top: 7px
+}
+.jumbotron-padding{
+	padding: 5px;
+	background-color: #FFFFFF;
+	margin-bottom: 1px;
+}
+.inputnumber{
+	width: 200px;
+}
+select{
+	width: 70%; 
+	height: 90%;
+}
