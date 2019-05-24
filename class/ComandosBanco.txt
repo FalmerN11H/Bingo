@@ -1,3 +1,5 @@
+CREATE DATABASE bingotester;
+
 CREATE TABLE usuario(
     id INT PRIMARY KEY AUTO_INCREMENT,
     login VARCHAR(50),
@@ -5,7 +7,7 @@ CREATE TABLE usuario(
     email VARCHAR(50),
     nome VARCHAR(50),
     UNIQUE (login)
-)
+);
 
 CREATE TABLE pergunta(
     id INT PRIMARY KEY AUTO_INCREMENT,
@@ -16,7 +18,7 @@ CREATE TABLE pergunta(
     a4 VARCHAR(200),
     a5 VARCHAR(200),
     resposta INT
-)
+);
 
 CREATE TABLE partida(
     id INT PRIMARY KEY AUTO_INCREMENT,
@@ -28,20 +30,20 @@ CREATE TABLE partida(
     acerto INT,
     erro INT,
     FOREIGN KEY (criador) REFERENCES usuario(id)
-)
+);
 
 CREATE TABLE grupo(
     id INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(30),
     partida INT,
     FOREIGN KEY (partida) REFERENCES partida(id)
-)
+);
 
 CREATE TABLE participante(
     ra INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(50),
     email VARCHAR(50)
-)
+);
 
 CREATE TABLE rodada(
     id INT PRIMARY KEY AUTO_INCREMENT,
@@ -52,7 +54,7 @@ CREATE TABLE rodada(
     FOREIGN KEY (grupo) REFERENCES grupo(id),
     FOREIGN KEY (partida) REFERENCES partida(id),
     FOREIGN KEY (pergunta) REFERENCES pergunta(id)
-)
+);
 
 CREATE TABLE grupoparticipante(
     id INT,

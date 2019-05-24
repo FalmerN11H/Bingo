@@ -22,16 +22,19 @@ class Sql extends PDO{
 		return $this->conn;
 	}
 
+	//pega os parametros e valor
 	private function setParams($statment, $parameters = array()){
 		foreach ($parameters as $key => $value) {
 			$this->setParam($statment,$key,$value);
 		}
 	}
 
+	//cada parametro e substitui por valor
 	private function setParam($statment,$key,$value){
 		$statment->bindParam($key,$value);
 	}
 
+	//recebe os comandos
 	public function query($rawQuery,$params = array()){
 		$stmt = $this->conn->prepare($rawQuery);
 		$this->setParams($stmt,$params);
@@ -39,6 +42,7 @@ class Sql extends PDO{
 		return $stmt;
 	}
 
+	//apenas um select
 	public function select($rawQuery,$params = array()):array{
 		$stmt = $this->query($rawQuery,$params);
 		return $stmt->fetchAll(PDO::FETCH_ASSOC);

@@ -17,6 +17,8 @@ class Partida{
 	private $acertos;
 	private $erros;
 
+
+	//getters and setters
 	public function setPartida($value){
 		$this->partida = $value;
 	}

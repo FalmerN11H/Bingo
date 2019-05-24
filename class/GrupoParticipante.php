@@ -10,6 +10,8 @@ class GrupoParticipante{
 	private $ra;
 	private $grupo;
 
+
+	//Getters and setters
 	public function setRa($value){
 		$this->ra = $value;
 	}

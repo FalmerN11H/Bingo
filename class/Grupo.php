@@ -11,6 +11,8 @@ class Grupo{
 	private $nome;
 	private $partida;
 
+	//Getters and setters
+
 	public function setId($value){
 		$this->id = $value;
 	}

@@ -11,6 +11,8 @@ class Participante{
 	private $nome;
 	private $email;
 
+
+	//Getters and Setters
 	public function setRa($value){
 		$this->ra = $value;
 	}
