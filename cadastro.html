@@ -7,7 +7,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="estilos.css">
-       
+        <script src="funcoes.js"></script>
+	   
     </head>
     <body>
 		<div>
@@ -39,12 +40,15 @@
                                                             <input class="form-control" id="nome" name="nome" placeholder="Nome completo" type="text" required="" pattern=".{3,50}" title="Minimo 3 e Maximo 50 caracteres">
 							</div>
 							<br>
-							<input class="btn btn-info btn-success btn-block" id="submit" name="submit" type="submit" value="Cadastrar">
+							<input class="btn btn-info btn-success btn-block" id="submit" name="submit" type="submit" value="Cadastrar" onclick="return validar()">
 						</fieldset>
 					</form>						
 				</div>
 				<div class="col-sm-4"></div>
 			</div>	
 		</div>
+		
     </body>
+	 
+	
 </html>

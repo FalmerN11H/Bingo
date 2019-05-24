@@ -7,6 +7,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="estilos.css">
+		<script src="funcoes.js"></script>
+		
     </head>
     <body>
 		<div>
@@ -18,34 +20,34 @@
 							<h2> Alterar dados</h2>
 							<hr>
 							<div class="input-group">
-								<input class="form-control" id="loginAntigo" name="loginAntigo" placeholder="Login Antigo" type="text" value required pattern=".{6,50}">
+								<input class="form-control" id="loginAntigo" name="loginAntigo" placeholder="Login Antigo" type="text" value>
 							</div>	
 							<br>
 							<div class="input-group">
-								<input class="form-control" id="senhaAntiga" name="senhaAntiga" placeholder="Senha Antiga" type="password" required pattern=".{6,50}">
+								<input class="form-control" id="senhaAntiga" name="senhaAntiga" placeholder="Senha Antiga" type="password">
 							</div>
                                                         <br>
                                                         <div class="input-group">
-								<input class="form-control" id="login" name="login" placeholder="Login Novo" type="text" value required pattern=".{6,50}" >
+								<input class="form-control" id="login" name="login" placeholder="Novo Login" type="text" value>
 							</div>	
 							<br>
 							<div class="input-group">
-								<input class="form-control" id="senha" name="senha" placeholder="Senha Nova" type="password" required pattern=".{6,50}">
+								<input class="form-control" id="senha" name="senha" placeholder="Nova Senha" type="password">
 							</div>
 							<br>
 							<div class="input-group">
-								<input class="form-control" id="confsenha" name="confsenha" placeholder="Confirmar Nova Senha" type="password" required pattern=".{6,50}">
+								<input class="form-control" id="confsenha" name="confsenha" placeholder="Confirmar nova senha" type="password">
 							</div>
 							<br>
 							<div class="input-group">
-								<input class="form-control" id="mail" name="mail" placeholder="E-mail" type="email" required pattern=".{6,50}">
+								<input class="form-control" id="mail" name="mail" placeholder="E-mail" type="email">
 							</div>
 							<br>
 							<div class="input-group">
-								<input class="form-control" id="nome" name="nome" placeholder="Nome completo" type="text" required pattern=".{3,50}">
+								<input class="form-control" id="nome" name="nome" placeholder="Nome completo" type="text">
 							</div>
 							<br>
-							<input class="btn btn-info btn-success btn-block" type="submit" value="Salvar">
+							<input class="btn btn-info btn-success btn-block" type="submit" value="Salvar" onclick="return validar()">
 						</fieldset>
 					</form>						
 				</div>

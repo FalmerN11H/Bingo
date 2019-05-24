@@ -24,7 +24,7 @@ class CategoriaDao{
 	}
 
 	public function insert($obj){
-		$this->sql->query("INSERT INTO categoria(nome) VALUES (:nome)",array(":id"=>$obj->getId()));
+		$this->sql->query("INSERT INTO categoria(nome) VALUES (:nome)",array(":nome"=>$obj->getNome()));
 	}
 
 
@@ -33,7 +33,7 @@ class CategoriaDao{
 	}
 
 	public function update($obj){
-		$this->sql->query("UPDATE categoria SET nome = :nome WHERE id = :id",array(":id"=>$obj->getId()));
+		$this->sql->query("UPDATE categoria SET nome = :nome WHERE id = :id",array(":nome"=>$obj->getNome(),":id"=>$obj->getId()));
 	}
 
 	public static function search($obj){

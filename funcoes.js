@@ -60,3 +60,17 @@ window.onload = function(){
 		});
 	}
 }
+
+
+// Verificação de Senhas
+
+function validar() {
+        var senha = document.getElementById("senha").value;
+        var senhaConf = document.getElementById("confsenha").value;
+        if (senha != senhaConf) {
+            alert("Senha diferente");
+            return false;
+        }
+        return true;
+    }
+
