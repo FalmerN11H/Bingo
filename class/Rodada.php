@@ -12,7 +12,6 @@ class Rodada{
 	private $partida;
 	private $pergunta;
 	private $respondido;
-	private $numero;
 
 	public function setRodada($value){
 		$this->rodada = $value;
@@ -52,14 +51,6 @@ class Rodada{
 
 	public function getRespondido(){
 		return $this->respondido;
-	}
-
-	public function setNumero($value){
-		$this->numero = $value;
-	}
-
-	public function getNumero(){
-		return $this->numero;
 	}
 
 }

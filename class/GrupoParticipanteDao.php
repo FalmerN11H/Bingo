@@ -28,7 +28,7 @@ class GrupoParticipanteDao{
 	}
 
 	public function delete($obj){
-		$this->sql->query("DELETE FROM grupoparticipante WHERE ra = :ra", array(":ra"=>$obj->getRa()));
+		$this->sql->query("DELETE FROM grupoparticipante WHERE ra = :ra AND grupo = :grupo", array(":ra"=>$obj->getRa(),":grupo"=>$obj->getGrupo());
 	}
 
 	public function update($obj){

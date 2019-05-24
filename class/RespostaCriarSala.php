@@ -14,7 +14,11 @@ $saladao = PartidaDao();
 $nome = $_POST["nomesala"];
 $grupo = $_POST["part"];
 $participante = $_POST["qtde"];
-$tema = $_POST["tema"];
+
+$sala->setNome($nome);
+$sala->setMaximoGrupo($grupo);
+$sala->setMaximoParticipante($participante);
+
 
 $saladao->insert($sala);
 

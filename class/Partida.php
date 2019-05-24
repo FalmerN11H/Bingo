@@ -13,7 +13,6 @@ class Partida{
 	private $nome;
 	private $maximogrupo;
 	private $maximoparticipante;
-	private $tema
 	private $rodadas;
 	private $acertos;
 	private $erros;
@@ -54,16 +53,8 @@ class Partida{
 		$this->maximoparticipante = $value;
 	}
 
-	public function getMaximoGrupo(){
+	public function getMaximoParticipante(){
 		return $this->maximoparticipante;
-	}
-
-	public function setTema($value){
-		$this->tema = $value;
-	}
-
-	public function getTema(){
-		return $this->tema;
 	}
 
 	public function setRodadas($value){

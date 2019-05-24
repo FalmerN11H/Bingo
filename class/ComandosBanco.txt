@@ -7,11 +7,6 @@ CREATE TABLE usuario(
     UNIQUE (login)
 )
 
-CREATE TABLE categoria(
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    nome VARCHAR(30)
-)
-
 CREATE TABLE pergunta(
     id INT PRIMARY KEY AUTO_INCREMENT,
     pergunta VARCHAR(200),
@@ -20,15 +15,15 @@ CREATE TABLE pergunta(
     a3 VARCHAR(200),
     a4 VARCHAR(200),
     a5 VARCHAR(200),
-    resposta INT,
-    categoria INT,
-    FOREIGN KEY (categoria) REFERENCES categoria(id)
+    resposta INT
 )
 
 CREATE TABLE partida(
     id INT PRIMARY KEY AUTO_INCREMENT,
     criador INT,
     nome VARCHAR(50),
+    maximogrupo INT,
+    maximoparticipante INT,
     rodada INT,
     acerto INT,
     erro INT,
@@ -54,7 +49,6 @@ CREATE TABLE rodada(
     partida INT,
     pergunta INT,
     respondido INT,
-    numero INT,
     FOREIGN KEY (grupo) REFERENCES grupo(id),
     FOREIGN KEY (partida) REFERENCES partida(id),
     FOREIGN KEY (pergunta) REFERENCES pergunta(id)

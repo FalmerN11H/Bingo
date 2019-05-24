@@ -24,16 +24,16 @@ class RodadaDao{
 	}
 
 	public function insert($obj){
-		$this->sql->query("INSERT INTO rodada(grupo,partida,pergunta,respondido,numero) VALUES (:grupo,:partida,:pergunta,:respondido,:numero)",array(":grupo"=>$obj->getGrupo(),":partida"=>$obj->getPartida(),":pergunta"=>$obj->getPergunta(),":respondido"=>$obj->getRespondido(),":numero"=>$obj->getNumero()));
+		$this->sql->query("INSERT INTO rodada(grupo,partida,pergunta,respondido) VALUES (:grupo,:partida,:pergunta,:respondido)",array(":grupo"=>$obj->getGrupo(),":partida"=>$obj->getPartida(),":pergunta"=>$obj->getPergunta(),":respondido"=>$obj->getRespondido()));
 	}
 
 
 	public function delete($obj){
-		$this->sql->query("DELETE FROM rodada WHERE rodada = :rodada", array(":rodada"=>$obj->getRodada()));
+		$this->sql->query("DELETE FROM rodada WHERE id = :id", array(":id"=>$obj->getRodada()));
 	}
 
 	public function update($obj){
-		$this->sql->query("UPDATE rodada SET grupo = :grupo, partida = :partida, pergunta = :pergunta, respondido = :respondido, numero = :numero WHERE rodada = :rodada",array(":grupo"=>$obj->getGrupo(),":partida"=>$obj->getPartida(),":pergunta"=>$obj->getPergunta(),":respondido"=>getRespondido(),":numero"=>getNumero()));
+		$this->sql->query("UPDATE rodada SET grupo = :grupo, partida = :partida, pergunta = :pergunta, respondido = :respondido WHERE id = :id",array(":grupo"=>$obj->getGrupo(),":partida"=>$obj->getPartida(),":pergunta"=>$obj->getPergunta(),":respondido"=>getRespondido()));
 	}
 
 	public static function search($obj){

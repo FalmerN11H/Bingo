@@ -15,7 +15,6 @@ class Pergunta{
 	private $alternativa4;
 	private $alternativa5;
 	private $resposta;
-	private $categoria;
 
 	public function setId($value){
 		$this->id = $value;
@@ -79,14 +78,6 @@ class Pergunta{
 
 	public function getResposta(){
 		return $this->resposta;
-	}
-
-	public function setCategoria($value){
-		$this->categoria = $value;
-	}
-
-	public function getCategoria(){
-		return $this->categoria;
 	}
 
 }

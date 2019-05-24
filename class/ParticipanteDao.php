@@ -33,7 +33,7 @@ class ParticipanteDao{
 	}
 
 	public function update($obj){
-		$this->sql->query("UPDATE participante SET ra = :ra, nome = :nome, email = :email WHERE ra = :ra",array(":ra"=>$obj->getRa(),":nome"=>$obj->getNome(),":email"=>$obj->getEmail()));
+		$this->sql->query("UPDATE participante SET nome = :nome, email = :email WHERE ra = :ra",array(":ra"=>$obj->getRa(),":nome"=>$obj->getNome(),":email"=>$obj->getEmail()));
 	}
 
 	public static function search($obj){
